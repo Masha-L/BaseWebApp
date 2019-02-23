@@ -1,28 +1,26 @@
 <meta charset="UTF-8">
 <title>Base Web App</title>
-
-
-<!-- First we import our css files -->
-
-<!-- bootstrap css -->
-<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-
-<!-- font awesome css -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-
-<!-- this app's own css -->
-<link rel="stylesheet" type="text/css" href="css/main.css"/>
-
+  <!-- this app's own css -->
+  <link rel="stylesheet" type="text/css" href="/css/main.css"/>
 
 
 <!-- Next import js files -->
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- then bootstrap -->
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-<!-- first we import jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-<!-- then bootstrap -->
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-<!-- then our app's own js file -->
-<script src="js/main.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "<%= process.env.API_KEY %>",
+    authDomain: "basewebapp-3f042.firebaseapp.com",
+    databaseURL: "https://basewebapp-3f042.firebaseio.com",
+    projectId: "basewebapp-3f042",
+    storageBucket: "basewebapp-3f042.appspot.com",
+    messagingSenderId: "809531552767"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="/js/main.js"></script>
